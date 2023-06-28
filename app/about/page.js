@@ -1,10 +1,11 @@
+import React from "react";
 import Image from "next/image";
-import somePick from "./image.jpg"
-export default function Home() {
-  return (
+import somePick from "../image.jpg"
+const about = () => {
+  return(
     <div>
     <div className="hero container max-w-screen-lg mx-auto pb-10">
-      <h1 className="text-7xl text-center mt-40">This is a page about Will</h1>
+      <h1 className="text-7xl text-center mt-40">About Me</h1>
       <Image src={somePick} width={500} height={500} alt="Picture" className="mx-auto mt-40" placeholder="blur" loading="lazy" />
       <p className="mt-20 mb-20">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis urna sit amet libero convallis mattis. Vestibulum iaculis posuere vehicula. Proin congue eleifend sem ac dapibus. Nunc efficitur, tortor eget bibendum malesuada, nulla nibh malesuada quam, et facilisis nunc leo placerat eros. Maecenas vitae facilisis dolor. Curabitur congue varius mi, ut cursus neque posuere vitae. Nam iaculis venenatis risus quis tincidunt. Suspendisse venenatis gravida quam et facilisis. Suspendisse tempor orci in tortor molestie semper.
@@ -44,6 +45,7 @@ export default function Home() {
           Nam purus quam, tincidunt in aliquet ut, semper vitae tellus. Sed et posuere nibh. Sed et volutpat risus, quis tristique diam. Nam neque tellus, ullamcorper et turpis ac, vehicula aliquet nisl. Sed vitae urna imperdiet turpis consectetur fringilla in sed dui. Fusce eu odio consectetur, ultricies metus nec, fringilla nunc. Nulla non sodales eros. Integer congue urna vel elit eleifend, at bibendum metus condimentum. Vivamus pharetra finibus diam, vitae commodo purus dictum ac.</p>
     </div>
     </div>
+  )
+};
 
-  );
-}
+export default about;

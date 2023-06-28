@@ -1,5 +1,8 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Link from 'next/link'
+import Image from "next/image";
+import somePick from "./image.jpg"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,7 +14,35 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+
+      <body className={inter.className}>
+        <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
+      <Image src={somePick} width={100} height={100} alt="Picture" placeholder="blur" loading="lazy" className='rounded-full' />
+      <nav>
+        <ul className='font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700'>
+          <li>
+          <Link href="/">Home</Link>
+          </li>
+          <li>
+          <Link href="/about">About</Link>
+          </li>
+          <li>
+          <Link href="/">Home</Link>
+          </li>
+          <li>
+          <Link href="/about">About</Link>
+          </li>
+          <li>
+          <Link href="/">Home</Link>
+          </li>
+          <li>
+          <Link href="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
+      </div>
+        {children}
+        </body>
     </html>
   )
 }
